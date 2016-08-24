@@ -1,5 +1,5 @@
 # react-todo
-reactjs的todo案例，react-cn.com/index.html
+reactjs的todo案例，[reactjs的todo案例](http://www.react-cn.com/index.html)
 
 	export default class App extends Component{
 	  constructor(props){
