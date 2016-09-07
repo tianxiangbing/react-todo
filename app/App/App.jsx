@@ -43,8 +43,8 @@ export default class App extends Component{
           {
             this.state.list.map((item,index)=>{
               return (
-                  <a key={index}>
-                    {item.edit?<input type="text" onKeyDown={(e)=>{e.keyCode==13?this.toEdit(item):undefined}} onBlur={this.blurHandle.bind(this,item)} onChange={this.changeItem.bind(this,item)} value={item.title}/>:<span onClick={this.toEdit.bind(this,item)}>{item.title}</span>}
+                  <a key={index} onClick={this.toEdit.bind(this,item)}>
+                    {item.edit?<input type="text" autoFocus={true} onKeyDown={(e)=>{e.keyCode==13?this.toEdit(item):undefined}} onBlur={this.blurHandle.bind(this,item)} onChange={this.changeItem.bind(this,item)} value={item.title}/>:<span>{item.title}</span>}
                     <button onClick={this.delHandle.bind(this,index)}>删除</button>
                   </a>
                 )
